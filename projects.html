@@ -17,7 +17,7 @@
     .carousel-slide.active { display: block; }
     .carousel-slide img { width: 100%; border-radius: 8px; }
     .prev, .next { background: #333; color: white; border: none; padding: 10px 16px; cursor: pointer; border-radius: 6px; margin: 10px 5px; }
-    a { display: inline-block; margin-bottom: 40px; text-decoration: none; color: #333; }
+    .back-btn { display: inline-block; margin-bottom: 40px; text-decoration: none; color: white; background-color: #333; padding: 10px 20px; border-radius: 8px; }
   </style>
 </head>
 <body>
@@ -37,7 +37,7 @@
   <button class="prev" onclick="changeSlide(-1)">&#8592;</button>
   <button class="next" onclick="changeSlide(1)">&#8594;</button>
 </div>
-<a href="index.html">← Back Home</a>
+<a class="back-btn" href="index.html">← Back Home</a>
 <script>
   let current = 0;
   const slides = document.querySelectorAll('.carousel-slide');
