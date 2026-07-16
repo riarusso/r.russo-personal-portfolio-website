@@ -1,51 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Projects</title>
-  <style>
-    body {
-  background-color: #f5f0ea;
-  font-family: Georgia, 'Times New Roman', serif;
-  margin: 0;
-  text-align: center;
-  color: #333;
-}
-    header { padding: 20px; font-weight: bold; }
-    h1 { margin-top: 40px; font-size: 42px; }
-    .carousel { position: relative; max-width: 400px; margin: 50px auto; }
-    .carousel-slide { display: none; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    .carousel-slide.active { display: block; }
-    .carousel-slide img { width: 100%; border-radius: 8px; }
-    .prev, .next { background: #333; color: white; border: none; padding: 10px 16px; cursor: pointer; border-radius: 6px; margin: 10px 5px; }
-    .back-btn { display: inline-block; margin-bottom: 40px; text-decoration: none; color: white; background-color: #333; padding: 10px 20px; border-radius: 8px; }
-  </style>
-</head>
-<body>
-<header></header>
-<h1>Projects</h1>
-<div class="carousel">
-  <div class="carousel-slide active">
-    <img src="[https://images.unsplash.com/photo-1516450360452-9312f546380f"](https://images.unsplash.com/photo-1516450360452-9312f546380f") alt="Party Planning App">
-    <h2>Party Planning App</h2>
-    <p>A concept app to organize events and guest lists.</p>
-  </div>
-  <div class="carousel-slide">
-    <img src="[https://via.placeholder.com/300"](https://via.placeholder.com/300") alt="Coming Soon">
-    <h2>Coming Soon</h2>
-    <p>More projects will be added here.</p>
-  </div>
-  <button class="prev" onclick="changeSlide(-1)">&#8592;</button>
-  <button class="next" onclick="changeSlide(1)">&#8594;</button>
-</div>
-<a class="back-btn" href="index.html">← Back Home</a>
-<script>
-  let current = 0;
-  const slides = document.querySelectorAll('.carousel-slide');
-  function changeSlide(dir) {
-    slides[current].classList.remove('active');
-    current = (current + dir + slides.length) % slides.length;
-    slides[current].classList.add('active');
-  }
-</script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects by Ria Russo.">
+    <title>Projects | Ria Russo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-name" href="index.html">Ria Russo</a>
+      <nav aria-label="Primary navigation">
+        <ul class="site-nav">
+          <li><a href="about.html">About</a></li>
+          <li><a aria-current="page" href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-content">
+      <h1>Projects</h1>
+      <section class="project-list" aria-label="Selected projects">
+        <article class="project-card">
+          <h2>Party Planning App</h2>
+          <img src="https://images.unsplash.com/photo-1516450360452-9312f546380f?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="A lively party with people dancing">
+        </article>
+        <article class="project-card">
+          <h2>Project Placeholder</h2>
+          <p>This space is ready for your next project.</p>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>

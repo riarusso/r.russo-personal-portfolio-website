@@ -1,90 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Contact</title>
-
-  <!-- Optional nicer fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lora&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      background-color: #f5f0ea;
-      margin: 0;
-      font-family: 'Lora', serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .card {
-      background: white;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      text-align: center;
-      max-width: 400px;
-      width: 90%;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    p {
-      margin: 10px 0 20px;
-      color: #666;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 10px 5px;
-      text-decoration: none;
-      color: white;
-      background-color: #333;
-      padding: 12px 20px;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #555;
-    }
-
-    .linkedin {
-      background-color: #0077b5;
-    }
-
-    .linkedin:hover {
-      background-color: #005582;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="card">
-    <h1>Contact</h1>
-    <p>Feel free to reach out—I'd love to connect.</p>
-
-    <a class="btn" href="mailto:rrusso@ithaca.edu?subject=Hello%20Ria">
-      Email Me
-    </a>
-
-    <br>
-
-    <a class="btn linkedin" href="https://www.linkedin.com" target="_blank">
-      LinkedIn
-    </a>
-
-    <br><br>
-
-    <a class="btn" href="index.html">
-      ← Back Home
-    </a>
-  </div>
-
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Ria Russo.">
+    <title>Contact | Ria Russo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-name" href="index.html">Ria Russo</a>
+      <nav aria-label="Primary navigation">
+        <ul class="site-nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a aria-current="page" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-content">
+      <h1>Contact</h1>
+      <p>Email: <a href="mailto:ria.russo@pursuit.org">ria.russo@pursuit.org</a></p>
+      <p><a href="https://www.linkedin.com/in/ria-russo-556086421/" target="_blank" rel="noreferrer">LinkedIn Profile</a></p>
+    </main>
+  </body>
 </html>

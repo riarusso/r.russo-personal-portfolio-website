@@ -1,60 +1,59 @@
+:root {
+  --background: #f5f1eb;
+  --text: #302e2e;
+  --content-width: 46rem;
+}
+
+* { box-sizing: border-box; }
+
 body {
-  background-color: #f5f0ea;
-  font-family: "Times New Roman", Times, serif;
-  color: black;
-  text-align: center;
+  min-width: 320px;
   margin: 0;
-}
-
-/* Email header */
-.email {
-  padding: 20px;
-  font-weight: bold;
-}
-
-/* Page title */
-.page-title {
-  color: #c21807; /* cherry red */
-  font-size: 48px;
-  margin-top: 20px;
-}
-
-/* About text */
-.about-text {
-  max-width: 700px;
-  margin: 40px auto;
-  font-size: 18px;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
   line-height: 1.6;
 }
 
-/* Homepage name */
-.name {
-  color: #0047AB; /* cobalt blue */
-  font-size: 60px;
+a { color: inherit; text-underline-offset: 0.18em; }
+a:hover, a:focus-visible { opacity: 0.65; }
+
+.home-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: start center;
+  padding: clamp(6rem, 16vh, 10rem) 1.5rem 4rem;
 }
 
-/* Table of contents links */
-.toc a {
-  display: block;
-  margin: 15px;
-  font-size: 24px;
-  text-decoration: none;
+.home-content { width: min(100%, 36rem); text-align: center; }
+
+.home-content h1 {
+  margin: 0 0 clamp(3.5rem, 10vh, 7rem);
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 0.95;
 }
 
-/* Color helpers */
-.red {
-  color: #c21807;
-}
+.home-nav, .site-nav { margin: 0; padding: 0; list-style: none; }
+.home-nav { display: grid; gap: 1rem; }
+.home-nav a { font-size: clamp(1.8rem, 4vw, 2.75rem); text-decoration: none; }
 
-.blue {
-  color: #0047AB;
-}
+.site-header, .page-content { width: min(calc(100% - 3rem), var(--content-width)); margin-inline: auto; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1.5rem; }
+.site-name { font-size: 1.25rem; font-weight: 700; text-decoration: none; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+.site-nav a { text-decoration: none; }
+.site-nav [aria-current="page"] { text-decoration: underline; }
+.page-content { padding-block: 3rem 5rem; }
+.page-content h1 { margin-top: 0; font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1; }
+.page-content p { max-width: 65ch; }
+.project-list { display: grid; gap: 2rem; }
+.project-card { padding: 1.5rem; border: 1px solid color-mix(in srgb, var(--text) 25%, transparent); }
+.project-card h2 { margin-top: 0; }
+.project-card img { display: block; width: 100%; height: auto; }
 
-/* Projects */
-.project {
-  margin: 30px;
-}
-
-.project img {
-  width: 400px;
+@media (max-width: 35rem) {
+  .site-header { align-items: flex-start; flex-direction: column; }
 }
